@@ -26,9 +26,16 @@ const HEADERS =
 const kafka = new Kafka({
   clientId: 'webapp',
   brokers: [
-    "broker-3-x2vk6zh7z7x2dfc9.kafka.svc04.eu-de.eventstreams.cloud.ibm.com:9093"
+    "broker-4-x2vk6zh7z7x2dfc9.kafka.svc04.eu-de.eventstreams.cloud.ibm.com:9093",
+    "broker-2-x2vk6zh7z7x2dfc9.kafka.svc04.eu-de.eventstreams.cloud.ibm.com:9093",
+    "broker-0-x2vk6zh7z7x2dfc9.kafka.svc04.eu-de.eventstreams.cloud.ibm.com:9093",
+    "broker-5-x2vk6zh7z7x2dfc9.kafka.svc04.eu-de.eventstreams.cloud.ibm.com:9093",
+    "broker-3-x2vk6zh7z7x2dfc9.kafka.svc04.eu-de.eventstreams.cloud.ibm.com:9093",
+    "broker-1-x2vk6zh7z7x2dfc9.kafka.svc04.eu-de.eventstreams.cloud.ibm.com:9093"
   ],
-  ssl: false,
+  ssl: {
+    rejectUnauthorized: false,
+  },
   connectionTimeout: 10_000,
   authenticationTimeout: 10_000,
   sasl: {
