@@ -33,7 +33,7 @@ const kafka = new Kafka({
     "broker-3-x2vk6zh7z7x2dfc9.kafka.svc04.eu-de.eventstreams.cloud.ibm.com:9093",
     "broker-1-x2vk6zh7z7x2dfc9.kafka.svc04.eu-de.eventstreams.cloud.ibm.com:9093"
   ],
-  ssl: true,
+  ssl: false,
   connectionTimeout: 10_000,
   authenticationTimeout: 10_000,
   sasl: {
